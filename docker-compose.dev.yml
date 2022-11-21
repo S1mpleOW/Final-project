@@ -23,7 +23,7 @@ services:
       context: ./mysql
       dockerfile: Dockerfile
     container_name: esdc-mysql
-    image: esdc-mysql:latest
+    image: esdc-mysql
     ports:
       - 3307:3306
     restart: always
@@ -42,6 +42,7 @@ services:
       dockerfile: Dockerfile
     image: esdc_client
     container_name: esdc_client_container
+    restart: always
     ports:
       - 3001:3000
     volumes:
@@ -52,5 +53,6 @@ services:
       - esdc_server_container
 volumes:
   mysql_data:
+  mysql:
 networks:
   esdc_server:
