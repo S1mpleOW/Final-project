@@ -1,0 +1,34 @@
+button i {
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.4px;
+}
+
+button {
+	margin: 5px;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+button:hover {
+	outline-color: orangered;
+}
+
+.customer__list-info,
+.customer__list-edit {
+	background-color: var(--main-color);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+.customer__list-info:hover,
+.customer__list-edit:hover,
+.customer__list-info:hover *,
+.customer__list-edit:hover * {
+	background-color: cadetblue;
+	color: white;
+}

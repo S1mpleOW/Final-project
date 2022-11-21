@@ -1,0 +1,63 @@
+{
+	"name": "admin",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@aldabil/react-scheduler": "^2.5.5",
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
+		"@hookform/resolvers": "^2.9.10",
+		"@mui/icons-material": "^5.10.9",
+		"@mui/material": "^5.10.12",
+		"@mui/x-date-pickers": "^5.0.7",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"bootstrap": "^5.2.2",
+		"chart.js": "^3.9.1",
+		"date-fns": "^2.29.3",
+		"dayjs": "^1.11.6",
+		"icons": "^1.0.0",
+		"react": "^18.2.0",
+		"react-bootstrap": "^2.5.0",
+		"react-chartjs-2": "^4.3.1",
+		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.39.1",
+		"react-icons": "^4.6.0",
+		"react-jwt": "^1.1.7",
+		"react-router-dom": "^6.4.2",
+		"react-scripts": "5.0.1",
+		"web-vitals": "^2.1.4",
+		"yup": "^0.32.11",
+		"zustand": "^4.1.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"postcss": "^8.4.18",
+		"tailwindcss": "^3.2.1"
+	}
+}

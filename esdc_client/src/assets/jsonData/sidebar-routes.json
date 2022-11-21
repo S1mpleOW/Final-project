@@ -1,0 +1,37 @@
+[
+	{
+		"display_name": "Dashboard",
+		"route": "/dashboard",
+		"icon": "bx bx-football"
+	},
+	{
+		"display_name": "Customers",
+		"route": "/customers",
+		"icon": "bx bx-user-pin"
+	},
+	{
+		"display_name": "Employees",
+		"route": "/employees",
+		"icon": "bx bx-notepad"
+	},
+	{
+		"display_name": "Products",
+		"route": "/products",
+		"icon": "bx bx-package"
+	},
+	{
+		"display_name": "Suppliers",
+		"route": "/suppliers",
+		"icon": "bx bxs-store-alt"
+	},
+	{
+		"display_name": "Services",
+		"route": "/services",
+		"icon": "bx bx-dialpad-alt"
+	},
+	{
+		"display_name": "Fields",
+		"route": "/fields",
+		"icon": "bx bx-football"
+	}
+]

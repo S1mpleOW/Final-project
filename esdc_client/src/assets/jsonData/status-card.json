@@ -1,0 +1,43 @@
+[
+	{
+		"id": 1,
+		"icon": "bx bx-dollar-circle",
+		"title": "Total revenue",
+		"link": "http://localhost:8080/api/total-price",
+		"revenueByYear": "http://localhost:8080/api/total-revenue-by-year",
+		"revenueByMonth": "http://localhost:8080/api/total-revenue-by-month"
+	},
+	{
+		"id": 2,
+		"icon": "bx bx-dollar-circle",
+		"title": "Total sale items",
+		"link": "http://localhost:8080/api/purchase-price",
+		"revenueByYear": "http://localhost:8080/api/total-purchase-by-year",
+		"revenueByMonth": "http://localhost:8080/api/total-purchase-by-month"
+	},
+	{
+		"id": 3,
+		"icon": "bx bx-dollar-circle",
+		"title": "Total imports revenue",
+		"link": "http://localhost:8080/api/import-price",
+		"revenueByYear": "http://localhost:8080/api/total-import-by-year",
+		"revenueByMonth": "http://localhost:8080/api/total-import-by-month"
+	},
+	{
+		"id": 4,
+		"icon": "bx bx-dollar-circle",
+		"title": "Total hire fields revenue",
+		"link": "http://localhost:8080/api/booked-monthly-price",
+		"revenueByYear": "http://localhost:8080/api/total-booked-by-year",
+		"revenueByMonth": "http://localhost:8080/api/total-booked-by-month"
+	},
+	{
+		"id": 5,
+		"icon": "bx bx-dollar-circle",
+		"title": "Total employees salary each month",
+		"link": "http://localhost:8080/api/total-employee-salary-each-month",
+		"revenueByYear": "javascript:void(0)",
+		"revenueByMonth": "javascript:void(0)",
+		"disabled": true
+	}
+]

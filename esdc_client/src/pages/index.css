@@ -1,0 +1,5 @@
+td > img {
+	height: 90px;
+	width: 90px;
+	border-radius: var(--border-radius);
+}

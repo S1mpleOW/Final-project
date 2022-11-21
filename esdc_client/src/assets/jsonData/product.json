@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Coca",
+        "price": 5000,
+        "image": "../../assets/images/coca.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Pepsi",
+        "price": 5000,
+        "image": "bx bx-wallet-alt"
+    },
+    {
+        "id": 3,
+        "name": "C2",
+        "price": 5000,
+        "image": "bx bx-wallet-alt"
+    },
+    {
+        "id": 4,
+        "name": "Mountain Dew",
+        "price": 5000,
+        "image": "bx bx-wallet-alt"
+    }
+]
