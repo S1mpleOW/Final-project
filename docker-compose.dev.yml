@@ -1,0 +1,56 @@
+version: '3'
+services:
+  esdc_server_container:
+    build:
+      context: ./esdc_server
+      dockerfile: Dockerfile
+    image: esdc_server
+    container_name: esdc_server_container
+    ports:
+      - 8080:8080
+    volumes:
+      - ./esdc_server:/app
+    networks:
+      - esdc_server
+    links:
+      - esdc-mysql
+    depends_on:
+      - esdc-mysql
+    environment:
+      - spring.datasource.url=jdbc:mysql://esdc-mysql:3306/ffms_refactor?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+  esdc-mysql:
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    container_name: esdc-mysql
+    image: esdc-mysql:latest
+    ports:
+      - 3307:3306
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/:/docker-entrypoint-initdb.d/
+    networks:
+      - esdc_server
+    environment:
+      MYSQL_DATABASE: ffms_refactor
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_PASSWORD: admin
+  esdc_client_container:
+    build:
+      context: ./esdc_client
+      dockerfile: Dockerfile
+    image: esdc_client
+    container_name: esdc_client_container
+    ports:
+      - 3001:3000
+    volumes:
+      - ./esdc_client:/app
+    networks:
+      - esdc_server
+    depends_on:
+      - esdc_server_container
+volumes:
+  mysql_data:
+networks:
+  esdc_server:
