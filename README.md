@@ -1,4 +1,4 @@
-# [Java spring boot] This is the source code for the enterprise system development concept course.
+# [Java spring boot + Reactjs] This is the source code for the enterprise system development concept course.
 
 ## How to run this project
 
