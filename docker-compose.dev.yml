@@ -46,11 +46,12 @@ services:
     ports:
       - 3001:3000
     volumes:
-      - ./esdc_client:/app
+      - ./esdc_client/src:/app/src
     networks:
       - esdc_server
     depends_on:
       - esdc_server_container
+      - esdc-mysql
 volumes:
   mysql_data:
   mysql:
