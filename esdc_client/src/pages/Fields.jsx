@@ -38,7 +38,7 @@ const Fields = () => {
 					<h1 className="text-2xl uppercase">No Field</h1>
 				</div>
 			)}
-			<div className="grid grid-cols-4 gap-4">
+			<div className="grid gap-4 md:!grid-cols-2 xl:!grid-cols-3 2xl:!grid-cols-4">
 				{fields?.length > 0 &&
 					fields.map((field) => (
 						<FieldCard

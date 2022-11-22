@@ -65,7 +65,7 @@ const Product = () => {
 					<h1 className="text-2xl uppercase">No product in storage</h1>
 				</div>
 			)}
-			<div className="row">
+			<div className="row md:!grid-cols-2 xl:!grid-cols-3 2xl:!grid-cols-4">
 				{products?.length > 0 &&
 					products.map((item) => (
 						<div key={item.resourceId}>

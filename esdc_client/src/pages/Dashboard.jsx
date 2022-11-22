@@ -55,7 +55,7 @@ const Dashboard = () => {
 	return (
 		<div>
 			<Header title="Dashboard" className="mb-3"></Header>
-			<div className="grid grid-cols-5 gap-3 mb-3">
+			<div className="grid gap-3 mb-3 lg:grid-cols-2 2xl:grid-cols-5">
 				{statusCardItem.map((item) => (
 					<StatusCard
 						key={item.title}

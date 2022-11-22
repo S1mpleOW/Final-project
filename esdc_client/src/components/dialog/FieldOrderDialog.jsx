@@ -69,12 +69,12 @@ const FieldOrderDialog = ({ scheduler, setRefresh }) => {
 		});
 		const responseData = await response.json();
 		console.log(responseData);
+		setLoading(false);
 		if (responseData.status === 200) {
 			setRefresh((prev) => !prev);
 			setType('success');
 			setContent('Booked field successfully!');
 			setOpen(true);
-			setLoading(false);
 			scheduler.close();
 		} else {
 			setError('phone', { message: responseData.message });

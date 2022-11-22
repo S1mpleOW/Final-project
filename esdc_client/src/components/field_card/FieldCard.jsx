@@ -20,7 +20,7 @@ const FieldCard = ({ id, name, price, image, setRefresh, type }) => {
 			</div>
 			<div className="mt-auto">
 				<div className="mt-3">
-					<h1 className="text-5xl font-semibold text-gray-800">{name}</h1>
+					<h1 className="text-3xl font-semibold text-gray-800 xl:text-4xl 2xl:text-5xl">{name}</h1>
 					<div className="flex items-center my-3">
 						<p className="text-lg text-gray-800">
 							<strong>{formatMoney(price)}</strong>

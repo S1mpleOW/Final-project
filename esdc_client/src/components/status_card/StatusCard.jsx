@@ -44,8 +44,10 @@ const StatusCard = ({ icon, title, link, isActive = false, onClick, id, disabled
 				<i className={icon}></i>
 			</div>
 			<div className="status-card__info">
-				<h4>{formatMoney(revenue?.total_price || 0)}</h4>
-				<span>
+				<h4 className="xl:text-[40px] text-[30px] xl:mb-10 mb-0 ">
+					{formatMoney(revenue?.total_price || 0)}
+				</h4>
+				<span className="text-[14px] whitespace-nowrap">
 					{title} / {fillterBy === 'MONTH' ? revenue?.month : revenue?.year}{' '}
 				</span>
 			</div>
