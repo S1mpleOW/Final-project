@@ -17,7 +17,7 @@ services:
     depends_on:
       - esdc-mysql
     environment:
-      - spring.datasource.url=jdbc:mysql://esdc-mysql:3306/ffms_refactor?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_URL: jdbc:mysql://esdc-mysql:3306/ffms_refactor?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
   esdc-mysql:
     build:
       context: ./mysql
