@@ -57,9 +57,9 @@ const labelsMonth = Array(new Date(currentYear, currentMonth, 0).getDate())
 // 	],
 // };
 
-const CustomLine = ({ values }) => {
+const CustomLine = ({ values, fillterBy }) => {
 	const [dataShow, setDataShow] = useState({
-		labelsMonth,
+		labels: fillterBy === 'MONTH' ? labelsMonth : labelsYear,
 		datasets: [
 			{
 				label: 'Total Revenue in ' + currentYear,
@@ -69,11 +69,11 @@ const CustomLine = ({ values }) => {
 			},
 		],
 	});
-	console.log(values);
+
 	useEffect(() => {
 		if (values && values?.total_price?.length > 0) {
 			setDataShow({
-				labels: labelsMonth,
+				labels: fillterBy === 'MONTH' ? labelsMonth : labelsYear,
 				datasets: [
 					{
 						label: values.name || '',
@@ -84,7 +84,7 @@ const CustomLine = ({ values }) => {
 				],
 			});
 		}
-	}, [values]);
+	}, [fillterBy, values]);
 
 	return <Line options={options} data={dataShow} />;
 };

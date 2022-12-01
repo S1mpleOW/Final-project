@@ -114,7 +114,7 @@ const Dashboard = () => {
 						</div>
 					</div>
 					<div className="pb-5 mt-2">
-						<CustomLine values={data}></CustomLine>
+						<CustomLine values={data} fillterBy={fillterBy}></CustomLine>
 					</div>
 				</>
 			)}
