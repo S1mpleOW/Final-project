@@ -10,11 +10,14 @@ import { useNotify } from '../store/useNotify';
 
 const schema = yup.object().shape({
 	fullName: yup.string().required('Full name is required'),
-	email: yup.string().required('Email is required'),
+	email: yup.string().email('Email must be correct format').required('Email is required'),
 	phone: yup
 		.string()
 		.required('Phone is required')
-		.matches('84|0[3|5|7|8|9])+([0-9]{8}', 'Phone must be number and start with 84 or 0'),
+		.matches(
+			new RegExp('^(84|0[3|5|7|8|9])+([0-9]{8})'),
+			"Phone number isn't correct format, Must be 10 digits"
+		),
 	address: yup.string().required('Address is required'),
 	identityCard: yup
 		.string()
