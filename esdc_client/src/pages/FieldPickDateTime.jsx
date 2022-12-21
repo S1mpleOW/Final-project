@@ -51,13 +51,13 @@ const FieldPickDateTime = () => {
 								color: '#82CD47',
 							};
 						});
-						setFieldBooked(mappedData);
+						setFieldBooked([...mappedData]);
 					}
 				});
 		}
 	}, [id, refresh, user.token]);
 	if (!id) return;
-
+	console.log(fieldBooked);
 	const handleCancelEvent = async (id) => {
 		console.log(id);
 		const response = await fetch(`${CANCEL_ORDER_FIELD}/${id}`, {

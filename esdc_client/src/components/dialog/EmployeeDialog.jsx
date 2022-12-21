@@ -11,9 +11,16 @@ import { useNotify } from '../store/useNotify';
 const schema = yup.object().shape({
 	fullName: yup.string().required('Full name is required'),
 	email: yup.string().required('Email is required'),
-	phone: yup.string().required('Phone is required'),
+	phone: yup
+		.string()
+		.required('Phone is required')
+		.matches('84|0[3|5|7|8|9])+([0-9]{8}', 'Phone must be number and start with 84 or 0'),
 	address: yup.string().required('Address is required'),
-	identityCard: yup.string().required('Identity card is required'),
+	identityCard: yup
+		.string()
+		.required('Identity card is required')
+		.min(6, 'Identity card must be at least 6 characters')
+		.max(10, 'Identity card must be 10 characters'),
 	sex: yup.string().oneOf(['MALE', 'FEMALE', 'OTHER']).required('Sex is required'),
 	dob: yup.string().required('Date of birth is required'),
 	fieldGroupId: yup.number().required('Field group is required'),
