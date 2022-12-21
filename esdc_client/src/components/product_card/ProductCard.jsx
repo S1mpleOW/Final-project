@@ -26,11 +26,7 @@ const ProductCard = (props) => {
 			},
 			body: JSON.stringify({
 				status: 'SOLD_OUT',
-				importPrice: 0,
-				unit: null,
 				quantity: 0,
-				supplier: null,
-				itemCategory: null,
 			}),
 		});
 		console.log(response);
